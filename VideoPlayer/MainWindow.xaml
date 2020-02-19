@@ -1,0 +1,26 @@
+﻿<Window x:Class="VideoPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowDrop="True">
+    <Grid AllowDrop="True" HorizontalAlignment="Right" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <MediaElement Name="mediaElement" HorizontalAlignment="Left" AllowDrop="True" Height="232" Margin="241,34,0,0" VerticalAlignment="Top" Width="512" MediaOpened="mediaElement_MediaOpened"/>
+        <Button Name="playBtn" Content="Пуск" HorizontalAlignment="Left" Margin="52,372,0,0" VerticalAlignment="Top" Click="playBtn_Click" Width="39"/>
+        <Button Name="pauseBtn" Content="Пауза" HorizontalAlignment="Left" Margin="105,371,0,0" VerticalAlignment="Top" Click="pauseBtn_Click" Width="58"/>
+        <Slider Name="videoSlider" HorizontalAlignment="Left" Margin="221,353,0,0" VerticalAlignment="Top" Width="472" ValueChanged="videoSlider_ValueChanged"/>
+        <Label Content="Нажмите на метку для перехода " HorizontalAlignment="Left" Margin="29,315,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Метки" Margin="29,20,598,112">
+            <ListBox Name="listBox" SelectionChanged="listBox_SelectionChanged" Margin="0,24,0,0"/>
+        </GroupBox>
+        <Button Content="Открыть файл" Name="openBtn" HorizontalAlignment="Left" Margin="52,347,0,0" VerticalAlignment="Top" Width="107" Click="openBtn_Click"/>
+        <Button Content="Добавить метку" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Width="234" Click="Button_Click"/>
+
+    </Grid>
+</Window>
