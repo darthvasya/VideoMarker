@@ -1,5 +1,10 @@
 # VideoMarker
 
+Сборка проекта:
+- нужна visual studio
+- в vs нужно опубликовать проект
+- собранный проект лежит в VideoPlayer/Release
+
 Поддерживаемые ОС:
 - Windows
 
